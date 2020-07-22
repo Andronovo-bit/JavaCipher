@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="1024" maxWidth="857.0" minHeight="392.0" minWidth="640" prefHeight="392.0" prefWidth="857.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controller">
+   <left>
+      <StackPane prefHeight="339.0" prefWidth="19.0" BorderPane.alignment="CENTER" />
+   </left>
+   <right>
+      <StackPane prefHeight="339.0" prefWidth="20.0" BorderPane.alignment="CENTER" />
+   </right>
+   <top>
+      <StackPane prefHeight="26.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+   </top>
+   <bottom>
+      <StackPane prefHeight="27.0" prefWidth="600.0" BorderPane.alignment="CENTER" />
+   </bottom>
+   <center>
+      <HBox prefHeight="426.0" prefWidth="822.0" BorderPane.alignment="CENTER">
+         <children>
+            <FlowPane prefHeight="347.0" prefWidth="472.0">
+               <children>
+                  <TitledPane animated="false" prefHeight="342.0" prefWidth="371.0" text="Encryption">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="316.0" prefWidth="328.0">
+                           <children>
+                              <VBox layoutY="30.0" prefHeight="316.0" prefWidth="232.8" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <FlowPane prefHeight="77.0" prefWidth="278.0">
+                                       <children>
+                                          <GridPane prefHeight="79.0" prefWidth="350.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="170.0" minWidth="10.0" prefWidth="116.00000762939453" />
+                                              <ColumnConstraints hgrow="SOMETIMES" maxWidth="233.99999237060547" minWidth="10.0" prefWidth="233.99999237060547" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Label prefHeight="18.0" prefWidth="80.0" text="Key:" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                                <TextField fx:id="key" promptText="Please entry 26 character if substitution..." GridPane.columnIndex="1" />
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </FlowPane>
+                                    <FlowPane layoutX="10.0" layoutY="10.0" prefHeight="77.0" prefWidth="278.0">
+                                       <children>
+                                          <GridPane prefHeight="79.0" prefWidth="350.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="170.0" minWidth="10.0" prefWidth="116.00000762939453" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="233.99999237060547" minWidth="10.0" prefWidth="233.99999237060547" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Label prefHeight="18.0" prefWidth="80.0" text="Plaintext" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                                <TextField fx:id="plaintext" prefHeight="76.0" prefWidth="234.0" GridPane.columnIndex="1" />
+                                             </children>
+                                          </GridPane>
+                                          <GridPane layoutX="10.0" layoutY="10.0" prefHeight="43.0" prefWidth="350.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="170.0" minWidth="10.0" prefWidth="118.6" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="233.99999237060547" minWidth="10.0" prefWidth="116.80000000000001" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="233.99999237060547" minWidth="10.0" prefWidth="123.39999999999998" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <ComboBox fx:id="cmbox1" prefHeight="26.0" prefWidth="110.0" GridPane.columnIndex="1" />
+                                                <Button mnemonicParsing="false" onAction="#encryptText" prefHeight="26.0" prefWidth="138.0" text="Encrypt" GridPane.columnIndex="2" />
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </FlowPane>
+                                    <GridPane prefHeight="79.0" prefWidth="350.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="170.0" minWidth="10.0" prefWidth="116.00000762939453" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="233.99999237060547" minWidth="10.0" prefWidth="233.99999237060547" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <Label prefHeight="18.0" prefWidth="80.0" text="Ciphertext" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                          <TextField fx:id="ciphertext" prefHeight="80.0" prefWidth="234.0" GridPane.columnIndex="1" />
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </TitledPane>
+               </children>
+            </FlowPane>
+            <FlowPane layoutX="10.0" layoutY="10.0" prefHeight="342.0" prefWidth="370.0">
+               <children>
+                  <TitledPane animated="false" prefHeight="342.0" prefWidth="371.0" text="Decryption">
+                     <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="316.0" prefWidth="328.0">
+                           <children>
+                              <VBox layoutY="30.0" prefHeight="316.0" prefWidth="232.8" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <FlowPane prefHeight="77.0" prefWidth="278.0">
+                                       <children>
+                                          <GridPane prefHeight="79.0" prefWidth="350.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="170.0" minWidth="10.0" prefWidth="116.00000762939453" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="233.99999237060547" minWidth="10.0" prefWidth="233.99999237060547" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Label prefHeight="18.0" prefWidth="80.0" text="Key:" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                                <TextField fx:id="keydecrypt" GridPane.columnIndex="1" />
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </FlowPane>
+                                    <FlowPane layoutX="10.0" layoutY="10.0" prefHeight="77.0" prefWidth="278.0">
+                                       <children>
+                                          <GridPane prefHeight="79.0" prefWidth="350.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="170.0" minWidth="10.0" prefWidth="116.00000762939453" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="233.99999237060547" minWidth="10.0" prefWidth="233.99999237060547" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <Label prefHeight="18.0" prefWidth="80.0" text="Ciphertext" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                                <TextField fx:id="ciphertextdecrypt" prefHeight="76.0" prefWidth="234.0" GridPane.columnIndex="1" />
+                                             </children>
+                                          </GridPane>
+                                          <GridPane layoutX="10.0" layoutY="10.0" prefHeight="43.0" prefWidth="350.0">
+                                             <columnConstraints>
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="170.0" minWidth="10.0" prefWidth="118.6" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="233.99999237060547" minWidth="10.0" prefWidth="116.80000000000001" />
+                                                <ColumnConstraints hgrow="SOMETIMES" maxWidth="233.99999237060547" minWidth="10.0" prefWidth="123.39999999999998" />
+                                             </columnConstraints>
+                                             <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                             </rowConstraints>
+                                             <children>
+                                                <ComboBox fx:id="cmbox2" prefHeight="26.0" prefWidth="109.0" GridPane.columnIndex="1" />
+                                                <Button mnemonicParsing="false" onAction="#decryptText" prefHeight="26.0" prefWidth="138.0" text="Decrypt" GridPane.columnIndex="2" />
+                                             </children>
+                                          </GridPane>
+                                       </children>
+                                    </FlowPane>
+                                    <GridPane prefHeight="79.0" prefWidth="350.0">
+                                       <columnConstraints>
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="170.0" minWidth="10.0" prefWidth="116.00000762939453" />
+                                          <ColumnConstraints hgrow="SOMETIMES" maxWidth="233.99999237060547" minWidth="10.0" prefWidth="233.99999237060547" />
+                                       </columnConstraints>
+                                       <rowConstraints>
+                                          <RowConstraints minHeight="10.0" prefHeight="30.0" valignment="CENTER" vgrow="SOMETIMES" />
+                                       </rowConstraints>
+                                       <children>
+                                          <Label prefHeight="18.0" prefWidth="80.0" text="Plaintext" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+                                          <TextField fx:id="plaintextdecrypt" prefHeight="80.0" prefWidth="234.0" GridPane.columnIndex="1" />
+                                       </children>
+                                    </GridPane>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                  </TitledPane>
+               </children>
+            </FlowPane>
+         </children>
+      </HBox>
+   </center>
+</BorderPane>
